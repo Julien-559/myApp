@@ -1,4 +1,15 @@
 MyApp::Application.routes.draw do
+  
+  get "users/new"
+
+  resource :users
+  match '/:id', :to => "users#show", :as => :user
+  match '/new', :to => "users#new", :as => :user
+  #get '/new', to: "users#new", as: :new
+  #root :to => "users#new"
+
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

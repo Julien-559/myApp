@@ -1,0 +1,7 @@
+<%= @user.nom %>, <%= @user.email %>
+<br>
+<strong>Messages</strong> <%= @user.activities.count %>
+<%= @activities.each do |p| %>
+	<%= p.title %>
+	<br>
+<% end %>
